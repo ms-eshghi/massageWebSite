@@ -16,4 +16,14 @@ router.get("/getallplaces", cors(corsOptions), async (req, res) => {
     return res.status(400).json({ message: error });
   }
 });
+
+router.post("/getplacebyid", cors(corsOptions), async (req, res) => {
+  const placeid=req.body.placeid
+  try {
+    const place = await Place.findOne({_id : placeid});
+    res.send(place);
+  } catch (error) {
+    return res.status(400).json({ message: error });
+  }
+});
 module.exports = router;
