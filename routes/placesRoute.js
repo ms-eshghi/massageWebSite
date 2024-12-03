@@ -26,4 +26,15 @@ router.post("/getplacebyid", cors(corsOptions), async (req, res) => {
     return res.status(400).json({ message: error });
   }
 });
+
+router.post('/addplace', cors(corsOptions), async (req, res) => {
+  try {
+    const newplace=new Place(req.body)
+    await newplace.save()
+res.send('New Place Added Successfully')
+
+  } catch (error) {
+    return res.status(400).json({error });
+  }
+} )
 module.exports = router;
