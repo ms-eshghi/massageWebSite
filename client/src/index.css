@@ -72,11 +72,11 @@ input, select{
   margin-right: 10px;
   border: 2px solid qua !important;
   width: 25vh !important;
-  height: 45px !important;
+  height: 35px !important;
   
 }
 .ant-picker-input{
-height:45px !important;
+height:30px !important;
 width: 25vh !important;
 border: 2px solid qua !important;
 
