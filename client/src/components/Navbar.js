@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg ">
-        <b><a className="navbar-brand" href="/" style={{ color: "blue" }}>
+        <b><a className="navbar-brand" href="/" style={{ color: "#5d4829" }}>
           Massage Reservation
         </a></b>
         <button

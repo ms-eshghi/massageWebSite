@@ -23,11 +23,7 @@ function Homescreen() {
   const [type, settype] = useState("all");
   useEffect(() => {
     const fetchPlaces = async () => {
-      // if (!localStorage.getItem("currentUser")) {
-      //   // If no user is logged in, redirect to login page
-      //   window.location.href = "/login";
-      //   return; // Prevent further booking logic from executing
-      // }
+
       try {
         setloading(true);
         // Fetch data from backend API
@@ -161,3 +157,8 @@ function Homescreen() {
 }
 
 export default Homescreen;
+      // if (!localStorage.getItem("currentUser")) {
+      //   // If no user is logged in, redirect to login page
+      //   window.location.href = "/login";
+      //   return; // Prevent further booking logic from executing
+      // }

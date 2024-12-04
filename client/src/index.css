@@ -14,8 +14,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Montserrat", sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f9f5f1;
+  color: #5d4829;
 }
 
 code {
@@ -23,7 +23,7 @@ code {
     monospace;
 }
 .navbar{
-  background-color: #e8d5d3;
+  background-color:  #f9f5f1;
   height: 100%;
 }
 .nav-link{
@@ -47,14 +47,15 @@ h1{
 
 }
 .btn{
-  background-color:#e8d5d3 !;
-  color: black  ;
+  background-color: #5d4829 !important;
+  color: #f9f5f1 !important ;
   box-shadow: none !important;
+  border:none !important;
 }
 .bs{
-  box-shadow: #e8d5d3 0px 5px 15px;
+  box-shadow: #5d4829 0px 5px 15px;
   margin-top: 20px !important;
-  border-radius: 5px !important;
+  border-radius: 5px!important;
   padding: 20px !important;
 }
 .bigimg{
@@ -90,7 +91,7 @@ h2{
   text-align: center;
 }
 .dropdown-toggle{
-  border: 0px solid #e8d5d3!important;
+  border: 0px solid  #f9f5f1!important;
 }
 .paymentimg{
   border-radius: 7px !important;
@@ -105,7 +106,7 @@ p{
 }
 .landing{
  
-  background-color: #e8d5d3 !important;
+  background-color: #f9f5f1 !important;
   height: 100vh ;
   
 }
@@ -117,7 +118,7 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
+  background-color:  #f9f5f1;
   color: #333;
 }
 
@@ -132,7 +133,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #fff;
+  background-color:  #f9f5f1;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -154,7 +155,7 @@ body {
 
 .appointment-btn {
   padding: 10px 20px;
-  background-color: #6c8f57;
+  background-color: #f9f5f1;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -167,7 +168,7 @@ body {
   justify-content: space-between;
   margin-top: 30px;
   padding: 20px;
-  background-color: #fff;
+  background-color:  #f9f5f1;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -200,7 +201,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
-  background-color: #6c8f57;
+  background-color:  #f9f5f1;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -215,10 +216,35 @@ body {
 .contact-info .cta-circle {
   margin-top: 10px;
   padding: 20px;
-  border: 2px solid #6c8f57;
+  border: 2px solid  #f9f5f1;
   border-radius: 50%;
   display: inline-block;
   color: #6c8f57;
   font-weight: bold;
 }
+.background {
+  width: 100%;
+  height: 100%;
+  background: url('./images/Untitled.jpg') no-repeat center center;
+  background-size: cover; /* Ensures the image covers the screen */
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Align content horizontally */
+  align-items: flex-end; /* Align content vertically */
+}
 
+.custom-btn {
+  margin: 85px;
+  padding: 20px 20px;
+  font-size: 16px;
+  color: white;
+  background-color:   #5d4829;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+  background-color: #5d4829;
+}
