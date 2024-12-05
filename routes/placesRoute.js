@@ -3,7 +3,7 @@ const cors = require("cors");
 const router = express.Router();
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://massagewebsite.netlify.app",
   optionsSuccessStatus: 200,
 };
 

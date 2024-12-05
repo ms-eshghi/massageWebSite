@@ -4,7 +4,7 @@ const User=require("../models/user")
 
 const cors = require("cors");
 const corsOptions = {
-    origin: "http://localhost:3000",
+    origin: "https://massagewebsite.netlify.app",
     optionsSuccessStatus: 200,
   };
 

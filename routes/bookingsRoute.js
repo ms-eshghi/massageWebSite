@@ -9,7 +9,7 @@ const moment = require("moment");
 const mongoose = require("mongoose");
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://massagewebsite.netlify.app",
   optionsSuccessStatus: 200,
 };
 
