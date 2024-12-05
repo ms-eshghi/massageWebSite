@@ -56,7 +56,7 @@ export function Bookings() {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get("/api/bookings/getallbookings");
+        const response = await axios.get("https://massagewebsite.onrender.com/api/bookings/getallbookings");
         setBookings(response.data);
         setLoading(false);
       } catch (error) {
@@ -114,7 +114,7 @@ export function Places() {
   useEffect(() => {
     const fetchPlaces = async () => {
       try {
-        const response = await axios.get("/api/places/getallplaces");
+        const response = await axios.get("https://massagewebsite.onrender.com/api/places/getallplaces");
         setPlaces(response.data);
         setLoading(false);
       } catch (error) {
@@ -170,7 +170,7 @@ export function Users() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("/api/users/getallusers");
+        const response = await axios.get("https://massagewebsite.onrender.com/api/users/getallusers");
         setUsers(response.data);
         setLoading(false);
       } catch (error) {
@@ -231,7 +231,7 @@ export function Addplace() {
 
     try {
       setLoading(true);
-      const result = await axios.post("/api/places/addplace", newPlace);
+      const result = await axios.post("https://massagewebsite.onrender.com/api/places/addplace", newPlace);
       console.log(result);
       alert("New Place Added Successfully");
       window.location.href = "/home";

@@ -17,7 +17,7 @@ export function MyBookings() {
     const fetchBookings = async () => {
       try {
         setloading(true)
-        const data   = await axios.post("/api/bookings/getbookingsbuyuserid", {
+        const data   = await axios.post("https://massagewebsite.onrender.com/api/bookings/getbookingsbuyuserid", {
           userid: user?._id,
           
         });
@@ -51,7 +51,7 @@ async function cancelBooking(bookingid, placeid){
     console.log("Booking ID:", bookingid);
     console.log("Place ID:", placeid);
 
-    const result=await( axios.post("/api/bookings/cancelbooking",{bookingid,placeid}))
+    const result=await( axios.post("https://massagewebsite.onrender.com/api/bookings/cancelbooking",{bookingid,placeid}))
     console.log(result.data);
     setloading(false)
     alert("Your bookind has been cancelled");
