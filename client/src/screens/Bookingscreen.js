@@ -17,7 +17,7 @@ function Bookingscreen() {
       try {
         setloading(true);
         const response = await axios.post(
-          "https://massagewebsite.onrender.com//api/places/getplacebyid",
+          "https://massagewebsite.onrender.com/api/places/getplacebyid",
           { placeid }
         );
 
@@ -45,7 +45,7 @@ function Bookingscreen() {
 
     try {
       const result = await axios.post(
-        "https://massagewebsite.onrender.com//api/bookings/bookplace",
+        "https://massagewebsite.onrender.com/api/bookings/bookplace",
         bookingDetails
       );
       console.log(result.data); // Log the success message from the server

@@ -28,7 +28,7 @@ function Homescreen() {
         // Fetch data from backend API
         const data = (
           await axios.get(
-            "https://massagewebsite.onrender.com//api/places/getallplaces"
+            "https://massagewebsite.onrender.com/api/places/getallplaces"
           )
         ).data;
         console.log(data);
