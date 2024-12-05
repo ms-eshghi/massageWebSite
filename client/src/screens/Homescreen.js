@@ -101,13 +101,13 @@ function Homescreen() {
         Please select date and time to show you available places
       </p>
       <div className="row bs">
-        <div className="col-12 col-md-3">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <DatePicker format={dateFormat} onChange={handleDateChange} />
           </div>
-          <div class="col-12 col-md-3">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <TimePicker format={timeFormat} onChange={handleTimeChange} />
           </div>
-          <div className="col-12 col-md-3">
+          <div className="col-lg-3 col-md-6 col-sm-12">
             <input
               type="text"
               className="'form-control"
@@ -119,7 +119,7 @@ function Homescreen() {
               onKeyUp={filterBysearch}
             />
           </div>
-          <div className="col-12 col-md-3">
+          <div className="col-lg-3 col-md-6 col-sm-12">
             <select
               className="form-control"
               value={type}
