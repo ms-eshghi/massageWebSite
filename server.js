@@ -2,11 +2,13 @@ const express = require("express");
 
 const app = express();
 const cors = require("cors");
-app.use(cors());
+
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://massagewebsite.netlify.app",
   optionsSuccessStatus: 200,
 };
+
+app.use(cors(corsOptions));
 
 const dbConfig = require("./db");
 const placesRoute = require("./routes/placesRoute");
