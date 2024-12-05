@@ -23,12 +23,13 @@ function Homescreen() {
   const [type, settype] = useState("all");
   useEffect(() => {
     const fetchPlaces = async () => {
-
       try {
         setloading(true);
         // Fetch data from backend API
         const data = (
-          await axios.get("http://localhost:5000/api/places/getallplaces")
+          await axios.get(
+            "https://massagewebsite.onrender.com//api/places/getallplaces"
+          )
         ).data;
         console.log(data);
         setPlaces(data);
@@ -97,46 +98,45 @@ function Homescreen() {
   }
   return (
     <div className="container">
-      <p className="textbooking" style={{color:'black'}}>
+      <p className="textbooking" style={{ color: "black" }}>
         Please select date and time to show you available places
       </p>
       <div className="row bs">
         <div className="col-lg-3 col-md-6 col-sm-12">
           <DatePicker format={dateFormat} onChange={handleDateChange} />
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <TimePicker format={timeFormat} onChange={handleTimeChange} />
-          </div>
-          <div className="col-lg-3 col-md-6 col-sm-12">
-            <input
-              type="text"
-              className="'form-control"
-              placeholder="search places"
-              value={searchkey}
-              onChange={(e) => {
-                setsearchkey(e.target.value);
-              }}
-              onKeyUp={filterBysearch}
-            />
-          </div>
-          <div className="col-lg-3 col-md-6 col-sm-12">
-            <select
-              className="form-control"
-              value={type}
-              onChange={(e) => {
-                filterByType(e.target.value);
-              }}
-            >
-              <option value="all">All</option>
-              <option value="swedish">Swedish</option>
-              <option value="thai">Thai</option>
-              <option value="shiatsu">Shiatsu</option>
-              <option value="face massage">Face massage</option>
-              <option value="hot stone">Hot stone</option>
-              <option value="four hands">Four hands</option>
-            </select>
-          </div>
-      
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <TimePicker format={timeFormat} onChange={handleTimeChange} />
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-12">
+          <input
+            type="text"
+            className="'form-control"
+            placeholder="search places"
+            value={searchkey}
+            onChange={(e) => {
+              setsearchkey(e.target.value);
+            }}
+            onKeyUp={filterBysearch}
+          />
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-12">
+          <select
+            className="form-control"
+            value={type}
+            onChange={(e) => {
+              filterByType(e.target.value);
+            }}
+          >
+            <option value="all">All</option>
+            <option value="swedish">Swedish</option>
+            <option value="thai">Thai</option>
+            <option value="shiatsu">Shiatsu</option>
+            <option value="face massage">Face massage</option>
+            <option value="hot stone">Hot stone</option>
+            <option value="four hands">Four hands</option>
+          </select>
+        </div>
       </div>
 
       <div className="row justify-content-center mt-3">
@@ -157,8 +157,8 @@ function Homescreen() {
 }
 
 export default Homescreen;
-      // if (!localStorage.getItem("currentUser")) {
-      //   // If no user is logged in, redirect to login page
-      //   window.location.href = "/login";
-      //   return; // Prevent further booking logic from executing
-      // }
+// if (!localStorage.getItem("currentUser")) {
+//   // If no user is logged in, redirect to login page
+//   window.location.href = "/login";
+//   return; // Prevent further booking logic from executing
+// }

@@ -14,11 +14,10 @@ function Bookingscreen() {
 
   useEffect(() => {
     const fetchPlace = async () => {
-      
       try {
         setloading(true);
         const response = await axios.post(
-          "http://localhost:5000/api/places/getplacebyid",
+          "https://massagewebsite.onrender.com//api/places/getplacebyid",
           { placeid }
         );
 
@@ -35,30 +34,28 @@ function Bookingscreen() {
     fetchPlace();
   }, [placeid]);
 
- async function bookPlace(){
-  
-  const bookingDetails = {
-     place,
-     userid: JSON.parse(localStorage.getItem("currentUser"))._id,
+  async function bookPlace() {
+    const bookingDetails = {
+      place,
+      userid: JSON.parse(localStorage.getItem("currentUser"))._id,
       fromdate,
-     fromtime,
-     totalamount
+      fromtime,
+      totalamount,
     };
-    
+
     try {
       const result = await axios.post(
-        "http://localhost:5000/api/bookings/bookplace",
+        "https://massagewebsite.onrender.com//api/bookings/bookplace",
         bookingDetails
       );
       console.log(result.data); // Log the success message from the server
       alert("Booking Successful!");
-      window.location.href = '/profile'; // Redirect after alert
+      window.location.href = "/profile"; // Redirect after alert
     } catch (error) {
       console.error("Error booking place:", error);
       alert("Booking failed. Please try again.");
     }
-
- }
+  }
   // async function onToken(token) {
   //   console.log("Payment Token Received:", token);
   //   const bookingDetails = {
@@ -87,11 +84,18 @@ function Bookingscreen() {
         <div className="row justify-content-center mt-5 bs">
           <div className="col-md-5 justify-content-center">
             <h2>{place.type} Massage</h2>
-            <img src={place.imageurl[0]} alt="" className="img-fluid paymentimg" />
+            <img
+              src={place.imageurl[0]}
+              alt=""
+              className="img-fluid paymentimg"
+            />
           </div>
 
           <div className="col-md-5 mt-5">
-            <div style={{ textAlign: "center" }} className="justify-content-center">
+            <div
+              style={{ textAlign: "center" }}
+              className="justify-content-center"
+            >
               <h1>
                 {" "}
                 <b>Booking Details</b>
@@ -106,8 +110,10 @@ function Bookingscreen() {
               </b>
             </div>
 
-                     <div style={{ textAlign: "center" }}>
-            <button className="btn btn-primary mt-3" onClick={bookPlace}>Pay Now</button>
+            <div style={{ textAlign: "center" }}>
+              <button className="btn btn-primary mt-3" onClick={bookPlace}>
+                Pay Now
+              </button>
               {/* <StripeCheckout
                 amount={totalamount * 100}
                 token={onToken}
