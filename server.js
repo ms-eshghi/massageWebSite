@@ -4,7 +4,7 @@ const app = express();
 const cors = require("cors");
 
 const corsOptions = {
-  origin: "https://massagewebsite.netlify.app",
+  origin: ["https://massagewebsite.netlify.app", "http://localhost:3000"],
   optionsSuccessStatus: 200,
 };
 
