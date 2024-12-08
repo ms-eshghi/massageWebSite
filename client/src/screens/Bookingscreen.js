@@ -35,6 +35,13 @@ function Bookingscreen() {
   }, [placeid]);
 
   async function bookPlace() {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (!currentUser) {
+      // If no user is logged in, redirect to login page
+      window.location.href = "/login";
+      return;
+    }
     const bookingDetails = {
       place,
       userid: JSON.parse(localStorage.getItem("currentUser"))._id,
@@ -56,26 +63,6 @@ function Bookingscreen() {
       alert("Booking failed. Please try again.");
     }
   }
-  // async function onToken(token) {
-  //   console.log("Payment Token Received:", token);
-  //   const bookingDetails = {
-  //     place,
-  //     userid: JSON.parse(localStorage.getItem("currentUser"))._id,
-  //     fromdate,
-  //     fromtime,
-  //     totalamount,
-  //     token,
-  //   };
-  //   axios
-  //     .post("/api/bookings/bookplace", bookingDetails)
-  //     .then((response) => {
-  //       alert("Payment successful! Booking confirmed.");
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error processing payment:", error);
-  //       alert("Payment failed. Please try again.");
-  //     });
-  // }
 
   return (
     <div className="m-5">
@@ -114,14 +101,7 @@ function Bookingscreen() {
               <button className="btn btn-primary mt-3" onClick={bookPlace}>
                 Pay Now
               </button>
-              {/* <StripeCheckout
-                amount={totalamount * 100}
-                token={onToken}
-                currency="EUR"
-                stripeKey="pk_test_51QQD9rKfgFH8HMsOMoRJxCg1antTUtMQG8aQ5hVW1gklco8hrce9zNd4LbcLgoTVswmQN1wnqWONMHyoMH34fpeG000N7UY66O"
-              >
-                <button className="btn btn-primary mt-3">Pay Now</button>
-              </StripeCheckout> */}
+              
             </div>
           </div>
         </div>

@@ -162,8 +162,4 @@ function Homescreen() {
 }
 
 export default Homescreen;
-// if (!localStorage.getItem("currentUser")) {
-//   // If no user is logged in, redirect to login page
-//   window.location.href = "/login";
-//   return; // Prevent further booking logic from executing
-// }
+
