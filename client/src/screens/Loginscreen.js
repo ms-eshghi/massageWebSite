@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
+import { Link } from "react-router-dom"; 
 
 function Loginscreen() {
   const [email, setemail] = useState("");
@@ -74,7 +75,7 @@ function Loginscreen() {
               >
                 {loading ? "Loading..." : "Login"}
               </button>
-             
+              <p>Don't have an account? <Link to="/register">Register here</Link></p>
             </div>
 
           </div>

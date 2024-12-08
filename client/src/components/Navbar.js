@@ -38,11 +38,11 @@ function Navbar() {
             ></i>
           </span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mr-3">
+        <div className="collapse navbar-collapse " id="navbarNav">
+          <ul className="navbar-nav">
             {user ? (
               <>
-                <div className="dropdown dpnav">
+                <div className="dropdown dpnav ">
                   <button
                     class="btn btn-secondary dropdown-toggle"
                     type="button"
@@ -57,7 +57,7 @@ function Navbar() {
                     <i className="fa fa-user"></i>{" "}
                     {capitalizeFirstWord(user.name)}
                   </button>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu ">
                     <a class="dropdown-item" href="/profile">
                       Profile
                     </a>
