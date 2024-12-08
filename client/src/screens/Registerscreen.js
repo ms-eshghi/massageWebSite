@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import Success from "../components/Success";
+
 function Registerscreen() {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
@@ -13,7 +14,7 @@ function Registerscreen() {
   const [success, setsuccess] = useState();
 
   async function register() {
-    if (password == cpassword) {
+    if (password === cpassword) {
       const user = {
         name,
         email,
@@ -39,70 +40,77 @@ function Registerscreen() {
         setloading(false);
         seterror(true);
       }
-      console.log(user);
     } else {
-      alert("Passwords are not matched");
+      alert("Passwords do not match");
     }
   }
+
   return (
     <div>
-      <div className="row justify-content-center mt-5 ">
-        <div className="col-md-5 mt-5">
-          {success && <Success message="Registeration success" />}
-          <div className="bs">
-            <h2>Register</h2>
-            <input
-              type="text"
-              name="form control"
-              id=""
-              placeholder="name"
-              value={name}
-              onChange={(e) => {
-                setname(e.target.value);
-              }}
-              required
-            />
+      {loading && <Loader />}
+      <div className="container mt-5">
+        <div className="row justify-content-center">
+          <div className="col-12 col-sm-8 col-md-6 col-lg-4">
+            {success && <Success message="Registration successful!" />}
+            {error && <Error message="An error occurred. Please try again." />}
+            <div className="bs p-4 border rounded shadow">
+              <h2 className="text-center mb-4">Register</h2>
 
-            <input
-              type="email"
-              name="form control"
-              id=""
-              placeholder="email"
-              value={email}
-              onChange={(e) => {
-                setemail(e.target.value);
-              }}
-              required
-            />
+              <div className="mb-3">
+                <input
+                  type="text"
+                  name="name"
+                  className="form-control w-100"
+                  id="name"
+                  placeholder="Name"
+                  value={name}
+                  onChange={(e) => setname(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  type="email"
+                  name="email"
+                  className="form-control w-100"
+                  id="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setemail(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  type="password"
+                  name="password"
+                  className="form-control w-100"
+                  id="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setpassword(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  type="password"
+                  name="cpassword"
+                  className="form-control w-100"
+                  id="cpassword"
+                  placeholder="Confirm Password"
+                  value={cpassword}
+                  onChange={(e) => setcpassword(e.target.value)}
+                  required
+                />
+              </div>
 
-            <input
-              type="text"
-              name="form control"
-              id=""
-              placeholder="password"
-              value={password}
-              onChange={(e) => {
-                setpassword(e.target.value);
-              }}
-              required
-            />
-
-            <input
-              type="text"
-              name="form control"
-              id=""
-              placeholder="confirm password"
-              value={cpassword}
-              onChange={(e) => {
-                setcpassword(e.target.value);
-              }}
-              required
-            />
-
-            <button className="btn btn-primary mt-3" onClick={register}>
-              {" "}
-              Register{" "}
-            </button>
+              <div className="mt-3">
+                <button className="btn btn-primary w-100" onClick={register}>
+                  Register
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

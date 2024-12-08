@@ -222,16 +222,6 @@ body {
   color: #6c8f57;
   font-weight: bold;
 }
-.background {
-  width: 100%;
-  height: 100%;
-  background: url('./images/Untitled.jpg') no-repeat center center;
-  background-size: cover; /* Ensures the image covers the screen */
-  position: relative;
-  display: flex;
-  justify-content: flex-start; /* Align content horizontally */
-  align-items: flex-end; /* Align content vertically */
-}
 
 .custom-btn {
   margin: 85px;
@@ -245,6 +235,16 @@ body {
   transition: background-color 0.3s;
 }
 
+.custom-btn {
+  font-size: 1.5rem;  /* Larger text */
+  padding: 15px 40px; /* Bigger padding */
+  height: 60px;       /* Increase height */
+}
 .custom-btn:hover {
-  background-color: #5d4829;
+  background-color: #b0803d !important;
+}
+.registerBtn{
+ width: "100%" !important;
+ height: "40px" !important;
+ padding: "10px" !important;
 }

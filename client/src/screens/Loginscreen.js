@@ -31,44 +31,55 @@ function Loginscreen() {
       seterror(true);
     }
   }
-  return (
-    <div>
-      {loading && <Loader />}
-      <div className="row justify-content-center mt-5 ">
-        <div className="col-md-5 mt-5">
-          {error && <Error message="Invalid Credentionals" />}
-          <div className="bs">
-            <h2>Login</h2>
-            <input
-              type="text"
-              name="form control"
-              id=""
-              placeholder="email"
-              value={email}
-              onChange={(e) => {
-                setemail(e.target.value);
-              }}
-            />
+  return ( <div>
+    {loading && <Loader />}
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-12 col-md-6 col-lg-4"> {/* Adjusted for responsiveness */}
+          {error && <Error message="Invalid Credentials" />}
+          <div className="bs p-4 border rounded shadow">
+            <h2 className="text-center mb-4">Login</h2>
 
-            <input
-              type="text"
-              name="form control"
-              id=""
-              placeholder="password"
-              value={password}
-              onChange={(e) => {
-                setpassword(e.target.value);
-              }}
-            />
+            <div className="mb-3">
+              <input
+                type="email"
+                name="email"
+                className="form-control w-100"
+                id="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setemail(e.target.value)}
+                required
+              />
+            </div>
 
-            <button className="btn btn-primary mt-3" onClick={Login}>
-              {" "}
-              Login{" "}
-            </button>
+            <div className="mb-3">
+              <input
+                type="password"
+                name="password"
+                className="form-control w-100"
+                id="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setpassword(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="text-center">
+              <button
+                className="btn btn-primary w-100"
+                onClick={Login}
+                disabled={loading} // Disable button during loading
+              >
+                {loading ? "Loading..." : "Login"}
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

@@ -246,55 +246,62 @@ export function Addplace() {
 
   return (
     <>
-      <div className="row">
-        <div className="col-md-5">
-          {loading && <Loader />}
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Place Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Type"
-            value={type}
-            onChange={(e) => setType(e.target.value)}
-          />
-          <input
-            type="number"
-            className="form-control"
-            placeholder="Price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-          />
-        </div>
-        <div className="col-md-5">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Image Url"
-            value={imageurl}
-            onChange={(e) => setImageurl(e.target.value)}
-          />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-5 text-right">
-          <button className="btn btn-primary mt-4" onClick={addPlace}>
-            Add Place
-          </button>
-        </div>
-      </div>
+     <div className="container">
+  <div className="row">
+
+    <div className="col-12 col-md-6 mb-3">
+      {loading && <Loader />}
+      <input
+        type="text"
+        className="form-control w-100"
+        placeholder="Place Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type="text"
+        className="form-control w-100"
+        placeholder="Type"
+        value={type}
+        onChange={(e) => setType(e.target.value)}
+      />
+      <input
+        type="number"
+        className="form-control w-100"
+        placeholder="Price"
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
+      />
+    </div>
+
+    <div className="col-12 col-md-6 mb-3">
+      <input
+        type="text"
+        className="form-control w-100"
+        placeholder="Description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+      <input
+        type="text"
+        className="form-control w-100"
+        placeholder="Image Url"
+        value={imageurl}
+        onChange={(e) => setImageurl(e.target.value)}
+      />
+    </div>
+  </div>
+
+
+  <div className="row">
+    <div className="col-12 text-center">
+      <button className="btn btn-primary mt-4 w-50" onClick={addPlace}>
+        Add Place
+      </button>
+    </div>
+  </div>
+</div>
+
     </>
   );
 }
