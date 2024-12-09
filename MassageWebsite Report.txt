@@ -6,32 +6,32 @@ MassageWebsite is an intuitive online platform that allows users to seamlessly b
 
 Features
 Public User Functionality
-Homepage and Booking:
 
+Homepage and Booking:
 The booking page showcases a list of massage places and services, including:
 Massage Types
 Price Information
 Descriptions
 Users can click "View Details" to expand and view the detailed information.
-Booking System:
 
+Booking System:
 Users can select a date and time for their desired massage service.
 Registration Requirement:
 If users are not registered, they are directed to the registration page.
 Registered users can log in with their email and password.
-User Profile:
 
+User Profile:
 Logged-in users can access their profile to:
 View personal details.
 Manage reservations, including cancellation options.
 Admin Functionality
-Admin Panel Access:
 
+Admin Panel Access:
 Accessible at Admin Panel(https://massagewebsite.netlify.app/admin) with the following credentials:
 Email: feshghi@gmail.com
 Password: 1234
-Admin Features:
 
+Admin Features:
 Add new massage places to the database.
 Manage users, including viewing their details.
 Review, modify, or manage all bookings.
