@@ -93,8 +93,8 @@ Writes=true&w=majority
 5. Create a .env File in the root directory of the project.
 6. Add your MONGO_URI=[your connection string]
 Next you can modify the code and run the application:
-1. Change urls to work on local running. ( files can be found from paths: server/server.js, 
-src/hooks/usePostReservations.js, src/hooks/useReservations.js )
+1. Change urls to work on local running. ( files can be found from paths: /server.js, 
+/routes/bookingsRoute.js, /routes/placesRoute.js,/routes/sersRoute.j)
 2. Run npm install to install required dependencies.
 3. To run the application, run npm start , this will run the server and client simultaneously.
 
