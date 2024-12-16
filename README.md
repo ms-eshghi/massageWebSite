@@ -94,7 +94,7 @@ Writes=true&w=majority
 6. Add your MONGO_URI=[your connection string]
 Next you can modify the code and run the application:
 1. Change urls to work on local running. ( files can be found from paths: /server.js, 
-/routes/bookingsRoute.js, /routes/placesRoute.js,/routes/sersRoute.j)
+/routes/bookingsRoute.js, /routes/placesRoute.js, /routes/usersRoute.j)
 2. Run npm install to install required dependencies.
 3. To run the application, run npm start , this will run the server and client simultaneously.
 
