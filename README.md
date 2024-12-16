@@ -22,15 +22,12 @@ Hosting: Netlify (frontend), Render (backend)
 MassageWebsite is an intuitive online platform that allows users to seamlessly book massage appointments, manage reservations, and explore various massage options. The system provides role-based access for users and administrators, ensuring secure and efficient functionality. Below is a detailed analysis of the key features and functionalities.
 
 
-
 //Features
 
 Public User Functionality
 
-
 --Homepage:
 click on Booking button to go to reservation page. 
-
 
 --Booking: Because rendering is used, it may take a while to load. If it takes too long, refresh once.
 
@@ -45,18 +42,15 @@ Descriptions
 Users can click "View Details" to expand and view the detailed information.
 
 
-
 --Booking System:
 
 Users can select a date and time for their desired massage service.
-
 
 --Registration Requirement:
 
 If users are not registered, they are directed to the registration page.
 
 Registered users can log in with their email and password.
-
 
 
 --User Profile:
@@ -67,7 +61,6 @@ View personal details.
 
 Manage reservations, including cancellation options.
 
-
 --Admin Functionality
 
 Admin Panel Access:
@@ -77,7 +70,6 @@ Accessible at Admin Panel(https://massagewebsite.netlify.app/admin) with the fol
 Email: feshghi@gmail.com
 
 Password: 1234
-
 
 
 --Admin Features:
@@ -153,5 +145,3 @@ deployed it there.
 Are there any wireframes or diagrams guiding these choices?
 No
 -------
-
-
